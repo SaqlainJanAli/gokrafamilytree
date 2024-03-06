@@ -130,11 +130,9 @@ const FamilyTree = (props) => {
       <div style={{ width: "100%", height: "100vh" }}>
         <D3Tree
           collapsible={false}
-          // className={}
-          // key={"Id"}
           data={treeData}
           orientation={viewType}
-          translate={{ x: 800, y: 50 }}
+          translate={{ x: 50, y: 50 }}
           renderCustomNodeElement={(rd3tProps) =>
             CustomLabelComponent({ ...rd3tProps })
           }
