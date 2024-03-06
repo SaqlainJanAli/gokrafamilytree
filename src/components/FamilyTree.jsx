@@ -134,7 +134,7 @@ const FamilyTree = (props) => {
           // key={"Id"}
           data={treeData}
           orientation={viewType}
-          translate={{ x: 50, y: 50 }}
+          translate={{ x: 500, y: 50 }}
           renderCustomNodeElement={(rd3tProps) =>
             CustomLabelComponent({ ...rd3tProps })
           }
