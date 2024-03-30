@@ -2,7 +2,6 @@ import React from "react";
 import { Tree as D3Tree } from "react-d3-tree";
 import MaleImage from "../resources/data/image/malepng.png";
 import FemaleImage from "../resources/data/image/femalepng.png";
-import treeStyle from "../css/tree.module.scss";
 
 const convertToTreeData = (data) => {
   let result = {
@@ -27,20 +26,20 @@ function CustomLabelComponent({ nodeDatum, foreignObjectProps }) {
   // Conditional styles for specific attributes
   const nameColor =
     nodeDatum.attributes.Gender === "Male" ? "darkgreen" : "brown";
-  const gradientLeftColor =
-    nodeDatum.attributes.Gender === "Male" ? "lightcyan" : "red";
-  const gradientRightColor =
-    nodeDatum.attributes.Gender === "Male" ? "white" : "white";
+  // const gradientLeftColor =
+  //   nodeDatum.attributes.Gender === "Male" ? "lightcyan" : "red";
+  // const gradientRightColor =
+  //   nodeDatum.attributes.Gender === "Male" ? "white" : "white";
 
-  const genderColor = "#FFFFFF"; // White text color for gender
+  // const genderColor = "#FFFFFF"; // White text color for gender
 
   return (
     <>
       <svg width="600" height="600" stroke="black" strokeWidth={1}>
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="20%" stopColor={gradientLeftColor} />
-            <stop offset="80%" stopColor={gradientRightColor} />
+            <stop offset="20%" stopColor={"cyan"} />
+            <stop offset="80%" stopColor={"white"} />
           </linearGradient>
         </defs>
         <rect
